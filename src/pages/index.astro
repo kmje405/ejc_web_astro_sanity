@@ -1,9 +1,12 @@
 ---
-import Layout from "../layouts/Layout.astro";
+// Example usage of the Header Organism
+import Layout from '../layouts/Layout.astro';
+import HomepageBanner from '../components/organisms/HomepageBanner'
 ---
+<Layout title='Home'>
+<main>
+  <HomepageBanner client:load />
 
-<Layout title="Home">
-  <section>
-    <h1>Homepage</h1>
-  </section>
+  <h1>Welcome to the site</h1>
+</main>
 </Layout>
