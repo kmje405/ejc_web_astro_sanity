@@ -1,0 +1,18 @@
+---
+// Organism: Combining Logo, Navigation, and SearchBar
+import Logo from '../atoms/Logo.astro';
+import Navigation from '../molecules/Navigation.astro';
+import SearchBar from '../molecules/SearchBar.astro';
+
+interface Props {
+  logoSrc: string;
+  logoAlt: string;
+}
+
+const { logoSrc, logoAlt } = Astro.props;
+---
+<header class="flex items-center justify-between p-4">
+  <Logo src={logoSrc} alt={logoAlt} />
+  <Navigation />
+  <SearchBar />
+</header>

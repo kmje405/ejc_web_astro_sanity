@@ -1,0 +1,36 @@
+---
+// Organism: Footer combining logo, navigation, social icons, and copyright
+import Logo from '../atoms/Logo.astro';
+import FooterNavigation from '../molecules/FooterNavigation.astro';
+import SocialIcons from '../molecules/SocialIcons.astro';
+
+interface Props {
+  logoSrc: string;
+  logoAlt: string;
+}
+
+const { logoSrc, logoAlt } = Astro.props;
+---
+<footer class="bg-gray-100 text-gray-700 py-6 px-4">
+  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+    <!-- Logo Section -->
+    <div class="mb-4 md:mb-0">
+      <Logo src={logoSrc} alt={logoAlt} />
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="mb-4 md:mb-0">
+      <FooterNavigation />
+    </div>
+
+    <!-- Social Media Links -->
+    <div>
+      <SocialIcons />
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="text-center mt-4 text-sm">
+    &copy; {new Date().getFullYear()} Eastland Jones Creative. All rights reserved.
+  </div>
+</footer>
