@@ -1,0 +1,17 @@
+---
+// Molecule: Grouping NavLinks into a Navigation Bar
+import NavLink from '../atoms/NavLink.astro';
+
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/services', label: 'Services' },
+
+];
+---
+<nav class="flex space-x-4">
+  {navItems.map((item) => (
+    <NavLink href={item.href} label={item.label} />
+  ))}
+</nav>

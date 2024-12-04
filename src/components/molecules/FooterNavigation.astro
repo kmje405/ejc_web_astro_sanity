@@ -1,0 +1,15 @@
+---
+// Molecule: Footer Navigation Links
+import NavLink from '../atoms/NavLink.astro';
+
+const footerLinks = [
+  { href: '/privacy', label: 'Privacy Policy' },
+  { href: '/terms', label: 'Terms of Service' },
+  { href: '/contact', label: 'Contact' },
+];
+---
+<nav class="flex space-x-4">
+  {footerLinks.map((link) => (
+    <NavLink href={link.href} label={link.label} />
+  ))}
+</nav>

@@ -1,0 +1,15 @@
+---
+// Molecule: Group of Social Media Icons
+import SocialIcon from '../atoms/SocialIcon.astro';
+
+const socialMedia = [
+  { href: 'https://twitter.com', icon: '/icons/twitter.svg', label: 'Twitter' },
+  { href: 'https://facebook.com', icon: '/icons/facebook.svg', label: 'Facebook' },
+  { href: 'https://instagram.com', icon: '/icons/instagram.svg', label: 'Instagram' },
+];
+---
+<div class="flex space-x-4">
+  {socialMedia.map((social) => (
+    <SocialIcon href={social.href} icon={social.icon} label={social.label} />
+  ))}
+</div>
