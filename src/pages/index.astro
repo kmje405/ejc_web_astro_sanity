@@ -3,12 +3,13 @@
 import HomepageLayout from "../layouts/HomepageLayout.astro";
 import HomepageBanner from "../components/organisms/HomepageBanner";
 import Introductions from "../components/organisms/Introductions.astro";
+import DesignCatalogue from "../components/organisms/DesignCatalogue.astro";
 ---
 
 <HomepageLayout title="Home">
   <main>
       <HomepageBanner client:load />
       <Introductions />
-
+      <DesignCatalogue />
   </main>
 </HomepageLayout>
