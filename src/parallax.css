@@ -1,0 +1,7 @@
+.parallax-bg {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 150%; /* Extra height for the parallax effect */
+  }
+  
